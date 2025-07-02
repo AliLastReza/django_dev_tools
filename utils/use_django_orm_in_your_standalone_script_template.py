@@ -28,6 +28,6 @@ django.setup()
 if __name__ == "__main__":
     from pprint import pprint
 
-    from django.contrib.auth.models import User
+    from django.contrib.auth import get_user_model
 
-    pprint(User.objects.all()[:5].values())
+    pprint(get_user_model().objects.all()[:5].values())
